@@ -36,7 +36,7 @@ class Gravatar implements AvatarInterface
      * @param  string $url
      * @return void
      */
-    public function setPlacholder($url)
+    public function setPlaceholderUrl($url)
     {
         $this->placeholder = $url;
     }
@@ -69,8 +69,11 @@ class Gravatar implements AvatarInterface
      */
     private function getGravatarUrl($email)
     {
-        $baseUrl = "http://www.gravatar.com/avatar/";
-        $queryString = "s={$this->size}&d={$this->placeholder}";
+        $baseUrl = 'http://www.gravatar.com/avatar/' . md5($email);
+
+        $queryData = ['s' => $this->size, 'd' => $this->placeholder];
+        $queryData = array_filter($queryData);
+        $queryString = http_build_query($queryData);
 
         return "$baseUrl?$queryString";
     }

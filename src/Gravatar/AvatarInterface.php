@@ -11,7 +11,7 @@ interface AvatarInterface
      * @param  string $url
      * @return void
      */
-    public function setPlacholder($url);
+    public function setPlaceholderUrl($url);
 
     /**
      * Set the size in px
