@@ -1,0 +1,27 @@
+{
+    "name": "dionbosschieter/Gravatar",
+    "description": "Simple transformer to get a gravatar url on a User model",
+    "keywords": [
+        "gravatar",
+        "laravel"
+    ],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dionbosschieter",
+            "email": "dionbosschieter@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gravatar\\": "src/Gravatar"
+        }
+    }
+}
