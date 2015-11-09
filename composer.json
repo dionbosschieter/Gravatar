@@ -16,8 +16,7 @@
     "require": {
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
-        "mockery/mockery": "~0.9.1"
+        "phpspec/phpspec": "~2.0"
     },
     "autoload": {
         "psr-4": {
