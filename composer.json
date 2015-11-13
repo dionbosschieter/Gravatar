@@ -1,5 +1,5 @@
 {
-    "name": "dionbosschieter/Gravatar",
+    "name": "dionbosschieter/gravatar",
     "description": "Simple transformer to get a gravatar url on a User model",
     "keywords": [
         "gravatar",
