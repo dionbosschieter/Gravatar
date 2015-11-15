@@ -48,4 +48,9 @@ class GravatarSpec extends ObjectBehavior
 
         $this->getAvatarUrl()->shouldReturn($this->baseExpectedUrl . '?s=150&d=http%3A%2F%2Fgoogle.nl%2Fa.jpg');
     }
+
+    function it_should_allow_a_extra_size_parameter()
+    {
+        $this->getAvatarUrlOfSize(40)->shouldReturn($this->baseExpectedUrl . '?s=40');
+    }
 }

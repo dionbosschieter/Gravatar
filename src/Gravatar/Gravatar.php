@@ -62,16 +62,27 @@ class Gravatar implements AvatarInterface
     }
 
     /**
+     * Image path of avatar
+     * 
+     * @param  int $sizeInPx
+     * @return string
+     */
+    public function getAvatarUrlofSize($sizeInPx)
+    {
+        return $this->getGravatarUrl($this->user->getEmailAdres(), $sizeInPx);
+    }
+
+    /**
      * Get the full gravatar Url with query strings attached
      *
      * @param  string $email
      * @return string
      */
-    private function getGravatarUrl($email)
+    private function getGravatarUrl($email, $size = null)
     {
         $baseUrl = 'http://www.gravatar.com/avatar/' . md5($email);
 
-        $queryData = ['s' => $this->size, 'd' => $this->placeholder];
+        $queryData = ['s' => $size ?: $this->size, 'd' => $this->placeholder];
         $queryData = array_filter($queryData);
         $queryString = http_build_query($queryData);
 
